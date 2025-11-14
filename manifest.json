@@ -2,7 +2,7 @@
   "name": "エニアグラム性格診断",
   "short_name": "性格診断",
   "description": "小学生向けエニアグラム性格診断ゲーム",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
