@@ -40,9 +40,18 @@ python3 -m http.server 8000
 
 ### GitHub Pagesでの公開
 
-1. リポジトリの Settings > Pages に移動
-2. Source を `main` ブランチに設定
-3. 公開されたURLにアクセス
+このリポジトリはGitHub Pagesに自動デプロイされるように設定されています。
+
+**初回セットアップ：**
+
+1. リポジトリの `Settings` > `Pages` に移動
+2. `Source` を `GitHub Actions` に設定
+3. `main` ブランチにマージすると自動的にデプロイされます
+4. デプロイ完了後、`https://hn770123.github.io/Enneagram4child/` でアクセス可能
+
+**更新方法：**
+
+- `main` ブランチに変更をプッシュすると、自動的に再デプロイされます
 
 ## ファイル構成
 
