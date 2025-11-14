@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小学生向けエニアグラム性格診断ゲーム">
+    <meta name="theme-color" content="#FF6B9D">
+    <title>エニアグラム性格診断</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+</head>
+<body>
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen active">
+        <div class="container">
+            <h1>🎲 エニアグラム<br>性格診断</h1>
+            <p class="subtitle">あなたはどんな性格？</p>
+            <button id="start-button" class="primary-button">はじめる</button>
+        </div>
+    </div>
+
+    <!-- 質問画面 -->
+    <div id="question-screen" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p class="progress-text"><span id="current-question">1</span> / <span id="total-questions">27</span></p>
+            
+            <div id="question-container">
+                <h2 id="question-text" class="question-text"></h2>
+                
+                <div class="choices">
+                    <button id="choice-a" class="choice-button">
+                        <span class="choice-label">A</span>
+                        <span id="choice-a-text" class="choice-text"></span>
+                    </button>
+                    <button id="choice-b" class="choice-button">
+                        <span class="choice-label">B</span>
+                        <span id="choice-b-text" class="choice-text"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="result-screen" class="screen">
+        <div class="container">
+            <h1>診断結果</h1>
+            <div id="result-content">
+                <div id="result-icon" class="result-icon"></div>
+                <h2 id="result-type" class="result-type"></h2>
+                <p id="result-description" class="result-description"></p>
+                <div id="result-traits" class="result-traits"></div>
+            </div>
+            <button id="restart-button" class="primary-button">もう一度やる</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
