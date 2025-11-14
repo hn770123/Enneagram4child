@@ -2,50 +2,50 @@
 
 // 質問データ（各タイプに3問ずつ、合計27問）
 const questions = [
-    // タイプ1: 完璧主義（きちんとしたい）
-    { type: 1, question: "ノートに字が曲がったらどうする？", choiceA: "書き直す", choiceB: "そのままにする" },
-    { type: 1, question: "掃除の時間にゴミを見つけたら？", choiceA: "すぐ拾う", choiceB: "気づかないふり" },
-    { type: 1, question: "テストでちょっと間違えたら？", choiceA: "すごく気になる", choiceB: "あまり気にしない" },
+    // タイプ1: 完璧を求める人
+    { type: 1, question: "給食でパンを落とした！どうする？", choiceA: "「3秒ルール！セーフ！」", choiceB: "「先生、パンが落ちました。新しいのください！」" },
+    { type: 1, question: "ノートに字を間違えた！どうする？", choiceA: "消しゴムでピカピカに直す", choiceB: "間違いも味だ！そのまま残す" },
+    { type: 1, question: "掃除当番でホウキを持ったら？", choiceA: "床の隅まで完璧に！", choiceB: "まあまあキレイならいいでしょ" },
     
-    // タイプ2: 助ける人（やさしい）
-    { type: 2, question: "友だちが困っていたら？", choiceA: "すぐ助ける", choiceB: "見ているだけ" },
-    { type: 2, question: "誰かが忘れ物をしたら？", choiceA: "貸してあげる", choiceB: "自分のことだけ考える" },
-    { type: 2, question: "先生に「ありがとう」と言われると？", choiceA: "うれしい", choiceB: "ちょっと恥ずかしい" },
+    // タイプ2: 人を助けたい人
+    { type: 2, question: "友達がランドセルを忘れた！どうする？", choiceA: "先生に報告して一緒に考える", choiceB: "自分のノートを半分貸してあげる" },
+    { type: 2, question: "給食で牛乳が余った！", choiceA: "牛乳苦手な子に『飲まなくていいよ』って言う", choiceB: "自分が全部飲んでヒーローになる" },
+    { type: 2, question: "体育で友達が転んだ！", choiceA: "すぐに駆け寄って『大丈夫？』", choiceB: "『痛そう！でもちょっと笑っちゃう』" },
     
-    // タイプ3: がんばり屋（目立ちたい）
-    { type: 3, question: "運動会で一番になりたい？", choiceA: "すごく思う", choiceB: "あまり思わない" },
-    { type: 3, question: "発表でほめられると？", choiceA: "うれしい", choiceB: "普通" },
-    { type: 3, question: "新しいことをするとき？", choiceA: "うまくやりたい", choiceB: "楽しめればいい" },
+    // タイプ3: がんばり屋・目立ちたい人
+    { type: 3, question: "運動会のリレーでバトンを受け取った！", choiceA: "全力疾走でスターになる", choiceB: "転んでも笑顔でゴール！" },
+    { type: 3, question: "テストで100点を取った！", choiceA: "みんなに見せびらかす", choiceB: "心の中でガッツポーズ" },
+    { type: 3, question: "クラスで発表するときは？", choiceA: "声を大きくして堂々と！", choiceB: "ちょっとカッコつけてポーズ" },
     
-    // タイプ4: 自分らしさ（特別でいたい）
-    { type: 4, question: "絵をかくとき？", choiceA: "自分だけの絵をかきたい", choiceB: "みんなと同じでいい" },
-    { type: 4, question: "好きな服を選ぶとき？", choiceA: "人とちがうものを選ぶ", choiceB: "人気のものを選ぶ" },
-    { type: 4, question: "自分の気持ち？", choiceA: "よく考える", choiceB: "あまり気にしない" },
+    // タイプ4: 個性的で感受性豊かな人
+    { type: 4, question: "絵を描いたら？", choiceA: "みんなが描かない色を使う", choiceB: "自分の気持ちを絵にぶつける" },
+    { type: 4, question: "音楽の時間に歌うときは？", choiceA: "ちょっと切ない顔で歌う", choiceB: "自分だけアレンジして歌う" },
+    { type: 4, question: "給食でカレーが出た！", choiceA: "ご飯に絵を描くようにルーをかける", choiceB: "『今日はカレー日記』って心の中で詩を書く" },
     
-    // タイプ5: 研究好き（知りたい）
-    { type: 5, question: "わからないことがあると？", choiceA: "調べる", choiceB: "そのままにする" },
-    { type: 5, question: "本を読むのは？", choiceA: "好き", choiceB: "あまり読まない" },
-    { type: 5, question: "休み時間は？", choiceA: "静かに過ごす", choiceB: "みんなと遊ぶ" },
+    // タイプ5: 知りたい！研究好きな人
+    { type: 5, question: "虫を見つけた！", choiceA: "じーっと観察して図鑑で調べる", choiceB: "友達に『この虫の名前知ってる？』ってクイズ" },
+    { type: 5, question: "宿題でわからない問題が出た！", choiceA: "自分で調べて解決", choiceB: "『これは未来の自分に任せよう』と放置" },
+    { type: 5, question: "給食のメニュー表を見たら？", choiceA: "栄養バランスを分析", choiceB: "『カレーは何回出るか』統計を取る" },
     
-    // タイプ6: 安心したい（心配性）
-    { type: 6, question: "初めての場所に行くと？", choiceA: "ちょっとドキドキ", choiceB: "ぜんぜん平気" },
-    { type: 6, question: "先生に「次テストあるよ」と言われたら？", choiceA: "すぐ準備する", choiceB: "あとで考える" },
-    { type: 6, question: "友だちと遊ぶとき？", choiceA: "ルールを守りたい", choiceB: "自由に遊びたい" },
+    // タイプ6: 安心したい人
+    { type: 6, question: "遊具で遊ぶときは？", choiceA: "安全確認してから登る", choiceB: "友達に『先にやってみて！』ってお願い" },
+    { type: 6, question: "テスト前にすることは？", choiceA: "先生に『出るところ』を確認", choiceB: "友達に『一緒に勉強しよう』って誘う" },
+    { type: 6, question: "怖い話を聞いたら？", choiceA: "布団にくるまって安心", choiceB: "『でも本当に出るかな？』ってちょっと疑う" },
     
-    // タイプ7: 楽しいこと大好き
-    { type: 7, question: "休み時間になったら？", choiceA: "すぐ遊びたいことを考える", choiceB: "のんびりする" },
-    { type: 7, question: "遊園地に行ったら？", choiceA: "いろんな乗り物に乗りたい", choiceB: "ひとつでいい" },
-    { type: 7, question: "夏休みは？", choiceA: "やりたいことをいっぱいしたい", choiceB: "少しでいい" },
+    // タイプ7: 楽しいこと大好きな人
+    { type: 7, question: "授業中に先生が真面目な話をしてる！", choiceA: "頭の中でギャグを考える", choiceB: "『早く休み時間になれ！』とワクワク" },
+    { type: 7, question: "給食でデザートが出た！", choiceA: "一番最初に食べちゃう", choiceB: "最後まで楽しみにとっておく" },
+    { type: 7, question: "遊び時間に何する？", choiceA: "新しい遊びを発明", choiceB: "みんなを集めて大騒ぎ" },
     
-    // タイプ8: リーダー（強い）
-    { type: 8, question: "みんなで遊ぶとき？", choiceA: "自分がルールを決めたい", choiceB: "だれかにまかせる" },
-    { type: 8, question: "けんかになったら？", choiceA: "はっきり言う", choiceB: "黙っている" },
-    { type: 8, question: "チームで活動するとき？", choiceA: "まとめ役になりたい", choiceB: "みんなに合わせる" },
+    // タイプ8: 強くて頼れる人
+    { type: 8, question: "クラスで意見が割れた！", choiceA: "『じゃあ俺が決める！』", choiceB: "『ケンカするよりジャンケンだ！』" },
+    { type: 8, question: "体育でボールが飛んできた！", choiceA: "全力でキャッチ！", choiceB: "『危ない！』ってみんなを守る" },
+    { type: 8, question: "給食で最後のプリンが残った！", choiceA: "『俺が食べる！』", choiceB: "『ジャンケンで勝負だ！』" },
     
-    // タイプ9: 平和好き（おだやか）
-    { type: 9, question: "友だちがけんかしていたら？", choiceA: "仲直りしてほしいと思う", choiceB: "気にしない" },
-    { type: 9, question: "授業で意見を言うとき？", choiceA: "みんなに合わせる", choiceB: "自分の意見を言う" },
-    { type: 9, question: "遊びのルールが決まらないとき？", choiceA: "どっちでもいいと思う", choiceB: "はっきり決めたい" }
+    // タイプ9: 平和を愛する人
+    { type: 9, question: "クラスでケンカが始まった！", choiceA: "『まあまあ、落ち着こう』って仲裁", choiceB: "静かにその場を離れる" },
+    { type: 9, question: "給食で嫌いな野菜が出た！", choiceA: "『まあ食べてもいいか』って食べる", choiceB: "友達にそっとあげる" },
+    { type: 9, question: "授業中に先生が質問！", choiceA: "答えたいけど、ちょっと様子を見る", choiceB: "『誰か答えてくれるよね』と安心" }
 ];
 
 // タイプ情報
@@ -207,6 +207,12 @@ function showQuestion() {
     questionText.textContent = question.question;
     choiceAText.textContent = question.choiceA;
     choiceBText.textContent = question.choiceB;
+    
+    // ボタンのフォーカスを解除（選択状態をクリア）
+    // すべてのフォーカスを解除
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
     
     // プログレスバー更新
     const progress = ((gameState.currentQuestionIndex + 1) / gameState.shuffledQuestions.length) * 100;
